@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-ink text-slate-200 font-sans antialiased; margin: 0; }
+.glass {
+  @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
+  box-shadow: 0 0 40px -12px rgba(34, 211, 238, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
